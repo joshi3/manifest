@@ -16,13 +16,19 @@
   <remote  name="gitlab"
            fetch="https://gitlab.com/" />
 
+  <remote name="trb"
+	  fetch="https://github.com/bootleg-q/"
+	  revision="refs/heads/queso" />
+
   <!-- General -->
-  <project path="bionic" name="bionic" remote="bootleggers" />
+  <project path="art" name="art" remote="trb" />
+  <project path="bionic" name="bionic" remote="trb" />
   <project path="bootable/recovery" name="bootable_recovery" remote="bootleggers" />
-  <project path="manifest" name="manifest" remote="bootleggers" />
+  <project path="libcore" name="libcore" groups="pdk" remote="trb" />
+  <project path="manifest" name="manifest" remote="trb" />
 
   <!-- Build -->
-  <project path="build/make" name="build" remote="bootleggers">
+  <project path="build/make" name="build" remote="trb">
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -32,41 +38,47 @@
     <linkfile src="tools" dest="build/tools" />
   </project>
   <project path="build/blueprint" name="build_blueprint" remote="bootleggers" />
-  <project path="build/soong" name="build_soong" remote="bootleggers">
+  <project path="build/soong" name="build_soong" remote="trb">
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
   <!-- Device -->
-  <project path="device/bootleg/sepolicy" name="device_bootleg_sepolicy" remote="bootleggers" />
+  <project path="device/bootleg/sepolicy" name="device_bootleg_sepolicy" remote="trb" />
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="bootleggers" />
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" remote="bootleggers" revision="queso-legacy-um"/>
   <project path="device/qcom/sepolicy-legacy" name="device_qcom_sepolicy" remote="bootleggers" revision="queso-legacy"/>
 
   <!-- External -->
   <project path="external/asus/stitchimage" name="external_asus_stitchimage" remote="bootleggers" />
+  <project path="external/sqlite" name="external_sqlite" groups="pdk" remote="trb" />
   <project path="external/tinycompress" name="external_tinycompress" remote="bootleggers" />
+  <project path="external/zlib" name="external_zlib" groups="pdk" remote="trb" />
+  <project path="external/arm-optimized-routines" name="arm-optimized-routines" remote="trb" />
 
   <!-- Hardware -->
-  <project path="hardware/bootleg/interfaces" name="hardware_bootleg_interfaces" remote="bootleggers" />
+  <project path="hardware/bootleg/interfaces" name="hardware_bootleg_interfaces" remote="trb" />
   <project path="hardware/interfaces" name="hardware_interfaces" remote="bootleggers" />
 
   <!-- Framework -->
-  <project path="frameworks/av" name="frameworks_av" remote="bootleggers" />
-  <project path="frameworks/base" name="frameworks_base" remote="bootleggers" />
+  <project path="frameworks/av" name="frameworks_av" remote="trb" />
+  <project path="frameworks/base" name="frameworks_base" remote="trb" />
   <project path="frameworks/native" name="frameworks_native" remote="bootleggers" />
+  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="trb" />
+  <project path="frameworks/rs" name="frameworks_rs" remote="trb" />
 
   <!-- Prebuilts -->
   <project path="prebuilts/tools-bootleg" name="prebuilts_tools-bootleg" remote="bootleggers" clone-depth="1" />
 
   <!-- Packages repos -->
-  <project path="packages/apps/BootlegDumpster" name="packages_apps_BootlegDumpster" remote="bootleggers" />
+  <project path="packages/apps/BootlegDumpster" name="packages_apps_BootlegDumpster" remote="trb" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="bootleggers" />
   <project path="packages/apps/Jelly" name="packages_apps_Jelly" remote="bootleggers" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="bootleggers" />
   <project path="packages/apps/Phonograph" name="packages_apps_Phonograph" remote="bootleggers" />
   <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="bootleggers" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="bootleggers" />
+  <project path="packages/apps/Plugins" name="packages_apps_Plugins" remote="trb" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="trb" />
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="bootleggers" />
   <project path="packages/apps/SimIcons" name="simrat39/icon-pack" remote="github" revision="master" />
   <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" remote="bootleggers" />
@@ -79,12 +91,12 @@
 
   <!-- System -->
   <project path="system/bt" name="system_bt" remote="bootleggers" />
-  <project path="system/core" name="system_core" remote="bootleggers" />
+  <project path="system/core" name="system_core" remote="trb" />
   <project path="system/netd" name="system_netd" remote="bootleggers" />
   <project path="system/sepolicy" name="system_sepolicy" remote="bootleggers" />
   <project path="system/vold" name="system_vold" remote="bootleggers" />
 
   <!-- Vendor -->
-  <project path="vendor/bootleggers" name="vendor_bootleggers" remote="bootleggers" />
+  <project path="vendor/bootleggers" name="vendor_bootleggers" remote="trb" />
 
 </manifest>
