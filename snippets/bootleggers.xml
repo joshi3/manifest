@@ -74,9 +74,9 @@
   <project path="packages/apps/BootlegDumpster" name="packages_apps_BootlegDumpster" remote="trb" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="bootleggers" />
   <project path="packages/apps/Jelly" name="packages_apps_Jelly" remote="bootleggers" />
-  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="bootleggers" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="trb" />
   <project path="packages/apps/Phonograph" name="packages_apps_Phonograph" remote="bootleggers" />
-  <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="bootleggers" />
+  <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="trb" />
   <project path="packages/apps/Plugins" name="packages_apps_Plugins" remote="trb" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="trb" />
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="bootleggers" />
@@ -87,7 +87,7 @@
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="bootleggers" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="bootleggers" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="bootleggers" />
-  <project path="packages/overlays/Shishufied" name="packages_overlays_Shishufied" remote="bootleggers" />
+  <project path="packages/overlays/Shishufied" name="packages_overlays_Shishufied" remote="trb" />
 
   <!-- System -->
   <project path="system/bt" name="system_bt" remote="bootleggers" />
